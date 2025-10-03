@@ -1,0 +1,129 @@
+
+
+css
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling */
+body {
+  background-image: url('ciePhoto/IMG-20250925-WA0005.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding: 20px;
+}
+
+/* Title */
+h1.title {
+  text-align: center;
+  color: #008000;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+/* Marquee Replacement */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  color: #006400;
+  margin-bottom: 20px;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%);}
+  100% { transform: translateX(-100%);}
+}
+
+/* Navigation Buttons */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.nav-button {
+  background-color: #008000;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.nav-button:hover {
+  background-color: #006400;
+}
+
+/* Video Grid */
+.video-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Individual Video Article */
+article {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Video Styling */
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Details Styling */
+details {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Responsive Enhancements */
+@media screen and (min-width: 768px) {
+.nav-links {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav-button {
+    width: auto;
+}
+
+.video-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+  article {
+    margin: 10px;
+}
+}
