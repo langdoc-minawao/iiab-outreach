@@ -1,8 +1,6 @@
 Module Integration Report
 
-We attempted two different methods to integrate our module (en-test-eldp) into IIAB.
-
-Method 1: Direct Integration via Modules Directory
+We followed the steps below to integrate our module (en-test-eldp) 
 1. Placed the module directory en-test-eldp in:
    /library/www/html/modules
 2. Added the module image en-test-eldp.jpg to:
@@ -11,10 +9,4 @@ Method 1: Direct Integration via Modules Directory
    /library/www/html/js-menu/menu-files/imenu-defs
 4. Edited menu.json to include a reference to our module.
 
-
-
-Method 2: Integration via Local Content and Nextcloud
-1. Uploaded the module directory to:
-   /library/www/html/local-content
-2. Cloned Nextcloud from the admin console and modified the relevant entries.
-3. Updated the menu item definition accordingly.
+And we could see our Module listed in the home, so far, so good. 
