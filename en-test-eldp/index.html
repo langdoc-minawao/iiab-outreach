@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +6,11 @@
   <link rel="stylesheet" href="index.css" />
   <title>ELDP Videos</title>
 </head>
-<body>
-    <style>
-         
-    </style>
-  <h1 class="title">ELDP videos Archive</h1>
+<body> 
+ <input type="search" id="autosearch" placeholder=" 🔍 Search videos.."> 
 
+
+  <h1 class="title">ELDP Videos Archive</h1>
   <div class="marquee">Endangered Language Documentation Project</div>
 
   <div class="nav-links">
@@ -20,25 +18,26 @@
     <a href="dgh.html" class="nav-button">Dughwede Videos</a>
   </div>
 
+
   <section class="video-grid">
-    <article>
-      <video controls>
+    <article >
+      <video controls width="100%">
         <source src="videos/dgh_E_001_480.mp4" type="video/mp4" />
-        videos\00022.MTS
         Your browser does not support the video tag.
       </video>
       <details>
-        <summary>Part of the Cody in Cinene</summary>
+        <summary> </summary>
         Support for the Chinene language documentation project. Chinene | Elders | Conversation<br>
         In this short video, elders from the Chinene community in the UNHCR camp of Minawao express
         their support for the documentation of their language and culture.<br>
         Directed by Dr. Pierpaolo Di Carlo. Created by MINAWAO YOUTH project on March 5, 2025.
       </details>
     </article>
-  </section>
 
+    <!-- more videos can be added by simply repeating the artilce -->
 
-<!--more vidoes can be added here by repeating the articles -->
+  <script src="search.js">
+  </script>
 
 </body>
 </html>
