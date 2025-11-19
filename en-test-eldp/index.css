@@ -1,181 +1,156 @@
-/* Base Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* --- VARIABLES --- */
+:root {
+  --primary: #07de68;
+  --secondary: #07de68;
+  --accent: #ffd500;
+  --bg: #f9f9f9;
+  --text: #222;
+  --card: #fff;
+  --radius: 12px;
+  --shadow: 0 4px 10px rgba(0,0,0,0.1);
+  --button-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-/*Body Styling*/
+/* --- GLOBAL STYLES --- */
 body {
-
-  background-size: cover;
-  background-position: center;
+  margin: 0;
+  background-color: #ffd500;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  padding: 20px;
-  background-color: bisque;
+  background: var(--bg);
+  color: var(--text);
 }
 
-/*Title */
-h1.title {
+/* --- SEARCH INPUT --- */
+#autosearch {
+  display: block;
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto 10px auto;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  outline: none;
+  transition: all 0.2s;
+}
+
+#autosearch:focus {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* --- TITLE --- */
+.title {
   text-align: center;
-  color: #008000;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px 2px #fff;
+  font-size: 1.8rem;
+  margin: 0.5em 0 0.2em 0;
+  color: var(--primary);
 }
 
-/* Marquee Animation */
+/* --- MARQUEE --- */
 .marquee {
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: 2rem;
-  color: #006400;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--secondary);
   margin-bottom: 20px;
-  animation: scroll 70s linear infinite;
 }
 
-
-
-@keyframes scroll {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
-
-/*Navigation Buttons */
+/* --- NAV BUTTONS --- */
 .nav-links {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
   margin-bottom: 30px;
 }
 
 .nav-button {
-  background-color: #008000;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease;
+  display: block;
   width: 90%;
-  max-width: 300px;
+  max-width: 280px;
+  padding: 12px 0;
   text-align: center;
+  background: linear-gradient(135deg, #008000, #00b300);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  box-shadow: var(--button-shadow);
+  transition: all 0.3s ease;
 }
 
 .nav-button:hover {
-  background-color: #006400;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.25);
+  background: linear-gradient(135deg, #006400, #009900);
 }
 
-/*  Video Grid */
+/* --- VIDEO GRID --- */
 .video-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
+  display: grid;
+  gap: 20px;
+  padding: 0 10px 30px 10px;
 }
 
-/* ------------------------------
-   Individual Video Article
------------------------------- */
 article {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 15px;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 700px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* ------------------------------
-   Video Styling
------------------------------- */
+article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
 video {
   width: 100%;
+  border-radius: var(--radius) var(--radius) 0 0;
   height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px;
 }
 
-/* ------------------------------
-   Details Styling
------------------------------- */
+/* --- DETAILS --- */
 details {
+  padding: 10px 15px;
   font-size: 0.95rem;
-  line-height: 1.5;
-  background-color: #f9f9f9;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  color: #444;
 }
 
-/* ------------------------------
-   Responsive Enhancements
------------------------------- */
-@media screen and (min-width: 768px) {
+details summary {
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+/* --- RESPONSIVE GRID --- */
+@media (min-width: 600px) {
   .nav-links {
     flex-direction: row;
     justify-content: center;
   }
-
   .nav-button {
     width: auto;
+    padding: 12px 25px;
   }
+}
 
+@media (min-width: 700px) {
   .video-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  article {
-    margin: 10px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* ------------------------------
-   Search Bar Styling
------------------------------- */
-#autosearch {
-  display: block;
-  margin: 10px 0 10px auto; /* right-aligns it */
-  background-color: whitesmoke;
-  font-size: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
-  height: 30px;
-  padding: 4px 8px;
-  width: 160px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-#autosearch:focus {
-  border-color: #c3c7c5;
-  box-shadow: 0 0 5px rgba(14, 199, 76, 0.3);
-  background-color: #fff;
-}
-
-#autosearch:hover {
-  background-color: #fff;
-}
-
-/* Adjust slightly for very small screens */
-@media screen and (max-width: 480px) {
-  #autosearch {
-    width: 130px;
-    font-size: 0.9rem;
-    padding: 3px 6px;
+@media (min-width: 1000px) {
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* ------------------------------
-   Hide Class for JS Filtering
------------------------------- */
+
+
 article.hide {
   display: none;
 }

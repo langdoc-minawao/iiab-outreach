@@ -1,0 +1,219 @@
+:root {
+  --primary: #008000;      /* main green (header) */
+  --secondary: #006400;    /* darker green (buttons, headings) */
+  --accent: #ffd500;       /* optional accent, can keep */
+  --bg: bisque;            /* body background */
+  --text: #333;            /* main text */
+  --card: rgba(255,255,255,0.85); /* session card */
+  --radius: 8px;
+  --shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* --- NAV BUTTONS --- */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.nav-button {
+  display: block;
+  width: 90%;
+  max-width: 280px;
+  padding: 12px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #008000, #00b300);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  box-shadow: var(--button-shadow);
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.25);
+  background: linear-gradient(135deg, #006400, #009900);
+}
+
+
+
+
+body.dark {
+  --primary: #90e090;      /* slightly lighter green for dark mode */
+  --secondary: #55aa55;
+  --accent: #ffd500;
+  --bg: #121212;
+  --text: #eee;
+  --card: #1e1e1e;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Header */
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1em;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+
+#themeToggle {
+  background: var(--secondary);
+  color: white;
+  border: none;
+  padding: 0.4em 0.6em;
+  border-radius: var(--radius);
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#themeToggle:hover {
+  background: var(--primary);
+  color: white;
+}
+
+#searchBox {
+  width: 90%;
+  max-width: 500px;
+  padding: 0.5em;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
+
+/* Session Card */
+.session {
+  background: var(--card);
+  padding: 0.8em;
+  margin: 0.8em 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: background 0.3s;
+}
+
+.session-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 0.5em 0;
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.toggle-icon {
+  transition: transform 0.3s;
+  font-size: 0.9rem;
+}
+
+.session.expanded .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Session Details */
+.session-details {
+  display: none;
+  margin-top: 0.8em;
+}
+
+.session.expanded .session-details {
+  display: block;
+}
+
+/* Audio Files */
+.audio-files {
+  margin-top: 0.5em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8em;
+}
+
+@media (min-width: 700px) {
+  .audio-files {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+audio {
+  width: 100%;
+  height: 40px;
+  border-radius: var(--radius);
+}
+
+/* Paragraphs */
+p {
+  line-height: 1.5;
+  margin: 0.5em 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #555;
+  font-size: 0.9em;
+  margin: 2em 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 500px) {
+  body {
+    font-size: 15px;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  .session {
+    padding: 0.6em;
+    margin: 0.5em 0;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 0.3em;
+  }
+
+  #searchBox,
+  #themeToggle {
+    width: 100%;
+  }
+
+  .toggle-icon {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+
