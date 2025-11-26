@@ -1,43 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="index.css" />
-  <title>ELDP Videos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>ELDP Videos</title>
 </head>
-<body> 
- <input type="search" id="autosearch" placeholder=" 🔍 Search videos.."> 
+<body>
 
+<input type="search" id="autosearch" placeholder="🔍 Search videos by ">
+<h1 class="title">ELDP Videos Archive</h1>
+<div class="marquee">Endangered Language Documentation Project</div>
 
-  <h1 class="title">ELDP Videos Archive</h1>
-  <div class="marquee">Endangered Language Documentation Project</div>
+<div class="nav-links">
+  <a href="cie.html" class="nav-button">Cinene Videos</a>
+  <a href="dgh.html" class="nav-button">Dughwede Videos</a>
+</div>
 
-  <div class="nav-links">
-    <a href="cie.html" class="nav-button">Cinene Videos</a>
-    <a href="dgh.html" class="nav-button">Dughwede Videos</a>
-  </div>
+<section class="video-grid" id="videoGrid">
+  <!-- Videos will be dynamically inserted here -->
 
+</section>
 
-  <section class="video-grid">
-    <article >
-      <video controls width="100%">
-        <source src="videos/dgh_E_001_480.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <details>
-        <summary> </summary>
-        Support for the Chinene language documentation project. Chinene | Elders | Conversation<br>
-        In this short video, elders from the Chinene community in the UNHCR camp of Minawao express
-        their support for the documentation of their language and culture.<br>
-        Directed by Dr. Pierpaolo Di Carlo. Created by MINAWAO YOUTH project on March 5, 2025.
-      </details>
-    </article>
-
-    <!-- more videos can be added by simply repeating the artilce -->
-
-  <script src="search.js">
-  </script>
-
+<script src="script.js"></script>
 </body>
 </html>

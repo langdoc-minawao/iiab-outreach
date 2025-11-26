@@ -1,35 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="index.css" />
-  <title></title>
+  <title>Dughwede Videos</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
-  <h1 class="title">Welcome to Dughwede videos</h1>
+  <header>
+    <h1 class="title">Dughwede Videos</h1>
+    <div class="nav-links">
+      <a href="index.html" class="nav-button">Back</a>
+    </div>
 
+    <input type="search" id="autosearch" placeholder="🔍 Search Dughwede videos...">
+  </header>
 
-  <div class="nav-links">
-    <a href="index.html" class="nav-button">>>Back..</a>
-  </div>
+  <main>
+    <section class="video-grid" id="video-grid">
+      <!-- Dughwede videos injected by app.js -->
+    </section>
+  </main>
 
-  <section class="video-grid">
-    <article>
-      <video controls>
-        <source src="videos/dgh_E_001_480.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <details>
-        <summary>Part of the Cody in Cinene</summary>
-        Support for the Chinene language documentation project. Chinene | Elders | Conversation<br>
-        In this short video, elders from the Chinene community in the UNHCR camp of Minawao express
-        their support for the documentation of their language and culture.<br>
-        Directed by Dr. Pierpaolo Di Carlo. Created by MINAWAO YOUTH project on March 5, 2025.
-      </details>
-    </article>
-  </section>
+  <script src="script.js"></script>
 </body>
 </html>
